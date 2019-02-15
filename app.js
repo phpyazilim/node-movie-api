@@ -11,7 +11,7 @@ const bodyParser = require('body-parser'); // post verilerini obje olarak verir
 
 const index = require('./routes/index');
 const movie = require('./routes/movie');
-
+const director = require('./routes/director');
  
 
 
@@ -32,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api/movies', movie);
+app.use('/api/directors', director);
+ 
 
 // catch 404 and forward to error handler  veyselkocaman - 23262326 
 app.use( (req, res, next) => {
