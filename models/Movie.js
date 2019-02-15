@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const Schema  = mongoose.Schema;
 
 const MovieSchema = new Schema({
-    director_id: Schema.Types.ObjectId,
+		director_id: 	{
+			type:Schema.Types.ObjectId,
+     // default:"5c672a8dae5a152b5888e7e3"
+		},
+
     title: {
 			type: String 
 			 
