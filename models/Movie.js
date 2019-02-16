@@ -4,6 +4,9 @@ const Schema  = mongoose.Schema;
 const MovieSchema = new Schema({
 		director_id: 	{
 			type:Schema.Types.ObjectId,
+			required:[true,'`{PATH}` alanı zorunludur.'],
+			maxlength:[15,' `{PATH}` alanı `{VALUE}` , {MAXLENGTH} karakterden küçük olmalıdır'],
+			minlength:[2,' `{PATH}` alanı `{VALUE}` , {MINLENGTH} karakterden büyük olmalıdır']
      // default:"5c672a8dae5a152b5888e7e3"
 		},
 
