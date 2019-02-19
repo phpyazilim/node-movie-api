@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser'); // post verilerini obje olarak verir
 
+ 
+
 
  //const db=require("./helper/db");
  const db = require('./helper/db.js')();
@@ -16,6 +18,14 @@ const director = require('./routes/director');
 
 
 const app = express();
+
+
+// Config
+const config = require('./config');
+app.set('api_secret_key', config.api_secret_key);
+
+// Middleware
+const verifyToken = require('./middleware/verify-token');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +41,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/api', verifyToken);
 app.use('/api/movies', movie);
 app.use('/api/directors', director);
  
