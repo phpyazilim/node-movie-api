@@ -7,9 +7,7 @@ const bodyParser = require('body-parser'); // post verilerini obje olarak verir
 
  
 
-
- //const db=require("./helper/db");
- const db = require('./helper/db.js')();
+const db = require('./helper/db.js')();
 
 const index = require('./routes/index');
 const movie = require('./routes/movie');
