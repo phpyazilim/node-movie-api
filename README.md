@@ -1,3 +1,6 @@
+
+[![Build Status](https://api.travis-ci.org/phpyazilim/node-movie-api.svg)](https://travis-ci.org/phpyazilim/node-movie-api/)
+
 # node-movie-api
 NodeJs Örnek Api Uygulaması
 
