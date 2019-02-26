@@ -9,7 +9,7 @@ const User = require("../models/Users");
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: '111xxxExpressccccc' });
+  res.render('index', { title: 'NodeJS app' });
 });
 
 
